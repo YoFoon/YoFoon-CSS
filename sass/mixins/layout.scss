@@ -1,0 +1,23 @@
+@import 
+    '../base/variable',
+    './clearfix';
+
+
+@mixin make-row($gutter: $grid-gutter-width) {
+  position: relative;
+  margin-left: ($gutter / -2);
+  margin-right: ($gutter / -2);
+  height: auto;
+  @include clearfix;
+}
+
+
+// @mixin make-grid-columns() {
+//     @mixin col($index) {
+//         $item:".col-{$index}, .col-xs-{$index}, .col-sm-{$index}, .col-md-{$index}, .col-lg-{$index}";
+//         @include col(($index+1), $item);
+//     }
+
+//     @include
+
+// }
