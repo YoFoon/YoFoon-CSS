@@ -6,3 +6,24 @@
   @include make-row();
   display: block;
 }
+
+@include make-grid-columns();
+@include make-grid();
+
+//极小屏
+@include make-grid(-xs);
+
+//小屏
+@media (min-width: $screen-sm-min) {
+  @include make-grid(-sm);
+}
+
+//中屏
+@media (min-width: $screen-md-min) {
+  @include make-grid(-md);
+}
+
+//大屏
+@media (min-width: $screen-lg-min) {
+  @include make-grid(-lg);
+}

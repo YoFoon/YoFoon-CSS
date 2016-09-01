@@ -12,12 +12,92 @@
 }
 
 
-// @mixin make-grid-columns() {
-//     @mixin col($index) {
-//         $item:".col-{$index}, .col-xs-{$index}, .col-sm-{$index}, .col-md-{$index}, .col-lg-{$index}";
-//         @include col(($index+1), $item);
-//     }
+@mixin make-grid-columns($gutter: $grid-gutter-width) {
+  .col{
+    position: relative;
+    display: block;
+  }
+  @include col(1);
+}
 
-//     @include
+@mixin col($index) {
+  $item: ".col-#{$index}, .col-xs-#{$index}, .col-sm-#{$index}, .col-md-#{$index}, .col-lg-#{$index}";
+  @include make-col($index+1, $item);
+}
 
-// }
+@mixin make-col( $index, $list ) {
+  $item: ".col-#{$index}, .col-xs-#{$index}, .col-sm-#{$index}, .col-md-#{$index}, .col-lg-#{$index}";
+  @if $index < $grid-columns {
+      @include make-col( $index +1, ($list,$item) ) 
+  } @else {
+      #{$list} {
+        position: relative;
+        // Prevent columns from collapsing when empty
+        min-height: 1px;
+        padding-left:  ($grid-gutter-width / 2);
+        padding-right: ($grid-gutter-width / 2);
+      }
+  }
+}
+
+
+@mixin make-grid($class: ""){
+    @include float-grid-columns(1,$class);
+    @include loop-grid-columns($grid-columns,$class);
+}
+
+
+@mixin float-grid-columns($index,$class) {
+    $item: "col#{$class}-#{$index}";
+    @include make-float-col($index+1,$class,$item);
+}
+@mixin make-float-col($index,$class,$list){
+    $item: "col#{$class}-#{$index}";
+    @if $index < $grid-columns {
+        @include make-float-col( $index +1, $class, ($list,$item) ) 
+    } @else {
+        #{$list}{
+            float: left;
+            flex: 0 0 auto;
+        }
+    }
+}
+
+
+@mixin loop-grid-columns( $index, $class ) {
+    .col#{$class}-#{$index} {
+        display: block;
+        width:  percentage($index, $grid-columns);
+    }
+    .col#{$class}-push-#{$index} {
+        left:  percentage($index, $grid-columns);
+    }
+    .col#{$class}-pull-#{$index} {
+        right:  percentage($index, $grid-columns);
+    }
+    .col#{$class}-offset-#{$index} {
+        margin-left:  percentage($index, $grid-columns);
+    }
+    .col#{$class}-order-#{$index} {
+        order:  $index;
+    }
+
+    @if $index > 0 {
+        @include loop-grid-columns($index - 1, $class);
+    } @else if $index == 0 {
+        .col#{$class}-#{$index} {
+            display: none;
+        }
+        .col-push-#{$index} {
+            left: auto;
+        }
+        .col-pull-#{$index} {
+            right:  auto;
+        }
+    }
+}
+
+
+@function percentage($index, $total) {
+    @return $index / $total * 100.0000%;
+}

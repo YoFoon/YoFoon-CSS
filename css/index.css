@@ -35,31 +35,39 @@ figcaption,
 menu,
 button {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 h1, h2, h3, h4, h5, h6 {
   font-size: 100%;
-  font-weight: normal; }
+  font-weight: normal;
+}
 
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
 caption, th {
-  text-align: left; }
+  text-align: left;
+}
 
 fieldset,
 img {
-  border: 0; }
+  border: 0;
+}
 
 li {
-  list-style: none; }
+  list-style: none;
+}
 
 ins {
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 del {
-  text-decoration: line-through; }
+  text-decoration: line-through;
+}
 
 input,
 button,
@@ -71,23 +79,28 @@ option {
   font-size: inherit;
   font-style: inherit;
   font-weight: inherit;
-  outline: 0; }
+  outline: 0;
+}
 
 button {
   -webkit-appearance: none;
   border: 0;
-  background: none; }
+  background: none;
+}
 
 a {
   -webkit-touch-callout: none;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 :focus {
   outline: 0;
-  -webkit-tap-highlight-color: transparent; }
+  -webkit-tap-highlight-color: transparent;
+}
 
 em, i {
-  font-style: normal; }
+  font-style: normal;
+}
 
 body {
   line-height: 1.5;
@@ -97,13 +110,15 @@ body {
   -webkit-user-select: none;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
-  outline: 0; }
+  outline: 0;
+}
 
 .visible-xs,
 .visible-sm,
 .visible-md,
 .visible-lg {
-  display: none !important; }
+  display: none !important;
+}
 
 .visible-xs-block,
 .visible-xs-inline,
@@ -117,84 +132,125 @@ body {
 .visible-lg-block,
 .visible-lg-inline,
 .visible-lg-inline-block {
-  display: none !important; }
+  display: none !important;
+}
 
 @media (max-width: 767px) {
   .visible-xs {
-    display: block !important; } }
+    display: block !important;
+  }
+}
 
 @media (max-width: 767px) {
   .visible-xs-block {
-    display: block !important; } }
+    display: block !important;
+  }
+}
 
 @media (max-width: 767px) {
   .visible-xs-inline {
-    display: inline !important; } }
+    display: inline !important;
+  }
+}
 
 @media (max-width: 767px) {
   .visible-xs-inline-block {
-    display: inline-block !important; } }
+    display: inline-block !important;
+  }
+}
 
 @media (min-width: 768px) and (max-width: 991px) {
   .visible-sm {
-    display: block !important; } }
+    display: block !important;
+  }
+}
 
 @media (min-width: 768px) and (max-width: 991px) {
   .visible-sm-block {
-    display: block !important; } }
+    display: block !important;
+  }
+}
 
 @media (min-width: 768px) and (max-width: 991px) {
   .visible-sm-inline {
-    display: inline !important; } }
+    display: inline !important;
+  }
+}
 
 @media (min-width: 768px) and (max-width: 991px) {
   .visible-sm-inline-block {
-    display: inline-block !important; } }
+    display: inline-block !important;
+  }
+}
 
 @media (min-width: 992px) and (max-width: 1199px) {
   .visible-md {
-    display: block !important; } }
+    display: block !important;
+  }
+}
 
 @media (min-width: 992px) and (max-width: 1199px) {
   .visible-md-block {
-    display: block !important; } }
+    display: block !important;
+  }
+}
 
 @media (min-width: 992px) and (max-width: 1199px) {
   .visible-md-inline {
-    display: inline !important; } }
+    display: inline !important;
+  }
+}
 
 @media (min-width: 992px) and (max-width: 1199px) {
   .visible-md-inline-block {
-    display: inline-block !important; } }
+    display: inline-block !important;
+  }
+}
 
 @media (min-width: 1200px) {
   .visible-lg {
-    display: block !important; } }
+    display: block !important;
+  }
+}
 
 @media (min-width: 1200px) {
   .visible-lg-block {
-    display: block !important; } }
+    display: block !important;
+  }
+}
 
 @media (min-width: 1200px) {
   .visible-lg-inline {
-    display: inline !important; } }
+    display: inline !important;
+  }
+}
 
 @media (min-width: 1200px) {
   .visible-lg-inline-block {
-    display: inline-block !important; } }
+    display: inline-block !important;
+  }
+}
 
 @media (max-width: 767px) {
   .hidden-xs {
-    display: none !important; } }
+    display: none !important;
+  }
+}
 
 @media (min-width: 768px) and (max-width: 991px) {
   .hidden-sm {
-    display: none !important; } }
+    display: none !important;
+  }
+}
 
 @media (min-width: 992px) and (max-width: 1199px) {
   .hidden-md {
-    display: none !important; } }
+    display: none !important;
+  }
+}
 
 @media (min-width: 1200px) {
   .hidden-lg {
-    display: none !important; } }
+    display: none !important;
+  }
+}
