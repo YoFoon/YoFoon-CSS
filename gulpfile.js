@@ -15,7 +15,7 @@ gulp.task('sassmin', function (done) {
         .pipe(autoprefixer({               //进行浏览器兼容
             browsers: ['last 10 versions']
         }))
-        //.pipe(concat('style.min.css'))
+        .pipe(concat('style.min.css'))
         .pipe(minifycss())
         .pipe(gulp.dest('./dist'));    //输出压缩好的新css文件
 });
